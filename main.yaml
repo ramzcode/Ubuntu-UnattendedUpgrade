@@ -1,0 +1,11 @@
+---
+- name: Ubuntu AutoUpdates Deployer
+  hosts: all
+   
+  roles:
+    - role: ansible-unattended-upgrades
+      vars:
+        is_virtual_machine: false
+        security_updates_only: false
+        unattended_upgrades_email: "example@epfl.ch"
+...
